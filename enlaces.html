@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>ENLACES</h1>
+    <p>
+        Enlaces: conocidos tambien por links popularmente. Su objetivo es conectar un pagina web con otra pagina web,
+        con un recurso tan interno como externo, o con otro sitio web<br><br>
+
+        Tienen el atributo obligatorio "href" donde le especificamos la ruta del recurso o sitio que queremos obtener<br><br>
+
+        Tambien tiene el atributo "target" que configura como queremos visualizar el recurso o sitio que solicitamos<br><br>
+
+        Establecen con la etiqueta "a"
+    </p>
+
+
+    <hr>
+    <a href="estructura.html">Ir a pagina dentro de la misma carpeta</a>
+
+    <p>
+
+        Rutas Absolutas: tienen un protocolo, http o https y son univas en la red, se suelen utilizar para rutas externa<br><br>
+
+        Rutas Relativas: pueden ser relativas al putno donde nos encontramos o relativas a la raiz del proyecto
+
+        No usan protocolo
+
+        Si el recurso se encuentra al mismo nivel (en la misma carpeta) pondremos unicamente el nombre del archivo
+
+        Si necesitamos salir de la carpeta usaremos "../" y se pone uno por cada nivel (carpeta) de la que queremos
+
+    </p>
+    <hr>
+    <p>
+        Mientras que sean paginas deben ir con sus repectivos protocolos
+    </p>
+    <a href="https://github.com/rrsamuu">Ir a una pagina externa</a>
+
+    <hr>
+
+    <p>
+        Atributos de los enlaces<br><br>
+        "target" define donde se abrira el recuros solicitado, por norma general siempre que usas rutas Absolutas se pondra como valor "_blank" "_self"
+
+        "download" atributo booleano, sirve para descargar el recurso solicitado. IMPORTANTE, el recurso debe estar en tu mismo servidor
+    </p>
+
+    <a href="https://github.com/rrsamuu" target="_self">GITHUB SELF</a>
+    <br><br>
+
+    <p>Al usar el atributo _blank se mostrara el recurso en una pestaña nueva del navegador</p>
+
+    <a href="https://github.com/rrsamuu" target="_blank" download>GITHUB BLANK</a>
+
+    <hr>
+
+</body>
+
+</html>
