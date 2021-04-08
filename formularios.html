@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>FORMULARIOS</h1>
+    <p>
+        La estructura basica de un formulario se compone de 4 elementos
+        <br><br>
+        form -> es la etiqueta que engloba nuestro formulario
+        <br><br>
+        label -> sirve para escribir el nombre del campo a rellenar
+        <br><br>
+        input -> sirve para crear un campo que permitira al uuario interactuar
+        <br><br>
+        button -> crea un boton que permitira enviar al formulario
+    </p>
+    <hr>
+    <h4>ASOCIAR UN LABEL CON INPUT</h4>
+    <p>
+        Debe tener el atributo "for" al cual se le indica un "id" que lo que hara sera emparejar el label con su input
+        corespondiente
+    </p>
+    <form action="">
+        <label for="name">Nombre</label>
+        <input type="text" id="name">
+        <button>Enviar Formulario</button>
+    </form>
+    <hr>
+    <h4>BUTTON VS TYPE BUTTON</h4>
+    <p>
+        button -> se comporta igual que un boton "button" <br><br>
+        submit -> enviar formulario <br><br>
+    </p>
+
+    <form action="">
+        <input type="text">
+        <input type="button" value="Enviar input">
+        <button>Enviar</button>
+    </form>
+    <hr>
+    <h4>TIPOS DE INPUTS</h4>
+    <p>
+        date -> se utiliza para introducir una fecha <br><br>
+        datetime -> obsoleto <br><br>
+        datetime-local -> fecha y hora, no funcionar en firebox <br><br>
+        time -> introducir hora <br><br>
+        week -> numero de la semana del año<br><br>
+        month -> introducir mes <br><br>
+        TIP se recomienda usar datatime-local y time para selecionar fecha y hora
+    </p>
+    <form action="">
+        <input type="date">
+        <input type="datetime">
+        <input type="datetime-local"><br>
+        <input type="date">
+        <input type="time">
+        <input type="month">
+        <input type="week">
+    </form>
+
+    <h4>TIPOS DE INPUTS PARA MOVILES</h4>
+    <p>
+        search -> barras de busqueda <br><br>
+        tel -> introducir numeros telefonicos <br><br>
+        text -> introducir texto <br><br>
+        email -> introducir email <br><br>
+        url -> introducir URLS <br><br>
+        password -> para contraseñas <br><br>
+    </p>
+    <form action="">
+        <label>Search</label>
+        <input type="search">
+        <label>Email</label>
+        <input type="email">
+        <label>text</label>
+        <input type="text">
+        <label>telefono</label>
+        <input type="tel">
+        <label>url</label>
+        <input type="url">
+        <label>password</label>
+        <input type="password">
+    </form>
+    <hr>
+    <h4>OTROS TIPOS DE INPUTS</h4>
+    <p>
+        color -> se utiliza para especificar un color <br><br>
+        hidden -> campo oculto, puede contener valor pero no se mostrara <br><br>
+        number -> valores numericos <br><br>
+        range -> establecer un rango <br><br>
+        reset -> resetear el formulario <br><br>
+    </p>
+    <form action="">
+        <input type="color">
+        <input type="hidden">
+        <input type="number">
+        <input type="range">
+        <input type="reset">
+        <input type="text">
+    </form>
+    <hr>
+    <h4>INPUT RADIO & CHECKBOX</h4>
+    <p>
+        radio -> permite seleccionar una unica opcion de una lista de opciones relacionadas
+        <br><br>
+        checkbox -> permite seleccionar varias opciones de una lista de opciones relacionadas
+        <br><br>
+        select -> crea una lista de opciones donde podemos selccionar una o varias opciones
+        <br><br>
+        Cada opcion ire dentro de una etiqueta de "option"
+        <br>
+        Si tenemos muchas opciones podemos ordenarlas por categorias a traves de la etiqueta "optgroup" con el atributo label para nombrar la categoria
+    </p>
+    <form action="">
+        <h6>Genero</h6>
+        <label for="">Masculino</label>
+        <input type="radio">
+        <label for="">Femenino</label>
+        <input type="radio">
+        <label for="">Desconocido</label>
+        <input type="radio">
+    </form>
+</body>
+
+</html>
