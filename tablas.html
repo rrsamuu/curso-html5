@@ -5,6 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        table{
+            font-family: sans-serif;
+            border: 2px solid grey;
+            border-collapse: collapse;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        caption{
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        th, td{
+            border: 2px solid grey;
+            padding: .5rem;
+        }
+        tr:nth-child(4) td:nth-child(2){
+            background-color: lightgreen;
+            letter-spacing: 90px;
+            padding-left: 50px;
+            text-transform: uppercase;
+        }
+        td:first-child, th, tfoot{
+            background-color: lightgreen;
+        }
+    </style>
 </head>
 <body>
     <h1>TABLAS</h1>
@@ -17,6 +45,7 @@
         <br><br>
         truco: el numero de celdas dentro de un td establecera el numero de columnas de la tabla
         <br><br>
+        <hr>
         Los titulos de las tablas se establecen con la etiqueta "caption", es uns etiqueta opcional, y segun la especificacion esa etiqueta se coloca justo despues de la etiqueta "table"
         <br><br>
         Las cabeceras de las tablas se establecen con la etiqueta "thead" <br>
@@ -24,13 +53,26 @@
         <br><br>
         El contenido de la tabla debe ir dentro de una etiqueta "tbody" para representar el cuerpo de la tabla
         <br><br>
+        <hr>
         Deforma opcional podemos colocar un "tfoot" a la tabla para establecer un pie de tabla, esto es algo que algunas tablas tienen como suma de cantidades o total
         <br><br>
-        Para hacer que las celdas ocupen mas de una fila o mas de una columna 
+        Para hacer que las celdas ocupen mas de una fila o mas de una columna tenemos 2 atributos: <br>
+        rowspan -> sirve para que una celda ocupem as de una fila, el valor por defecto es 1 <br><br>
+        colspan -> sirve para que una celda ocupe mas de una columa, el valor por defecto es 1
+        <br><br>
+        <hr>
+        Cuando necesitamos seleccionar una columna, tenemos la etiqueta "colgroup", uqe nos permite seleccionar una columna en concreto. DEntro podremos tantas etiquetas "col" como columnas tengamos, cada etiqueta "col" equivaldra a una columa siguiendo el mismo orden que tienen en la tabla 
+        <br><br>
+        Si necesitamos que una eituqeta "col" agrupe mas de una columna, tenemos el atributo "span" que funciona exactamente igual que rowspan y colspan
     </p>
     <hr>
     <table>
         <caption>HORARIO DE CLASES</caption>
+        <colgroup>
+            <col span="5">
+            <col>
+            
+        </colgroup>
         <thead>
             <tr>
                 <th></th>
@@ -80,7 +122,7 @@
             </tr>
             <tr>
                 <td>12:40 - 13:35</td>
-                <td>Musica</td>
+                <td rowspan="2">Tecnologia</td>
                 <td>Educacion Fisica</td>
                 <td>Plastica</td>
                 <td>Religion</td>
@@ -88,7 +130,6 @@
             </tr>
             <tr>
                 <td>13:35 - 14:30</td>
-                <td>Tecnologia</td>
                 <td>Frances</td>
                 <td>Tecnologia</td>
                 <td>Frances</td>
