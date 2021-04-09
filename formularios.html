@@ -106,7 +106,7 @@
         <input type="text">
     </form>
     <hr>
-    <h4>INPUT RADIO & CHECKBOX</h4>
+    <h4>INPUT RADIO & CHECKBOX & SELECT</h4>
     <p>
         radio -> permite seleccionar una unica opcion de una lista de opciones relacionadas
         <br><br>
@@ -116,17 +116,92 @@
         <br><br>
         Cada opcion ire dentro de una etiqueta de "option"
         <br>
-        Si tenemos muchas opciones podemos ordenarlas por categorias a traves de la etiqueta "optgroup" con el atributo label para nombrar la categoria
+        Si tenemos muchas opciones podemos ordenarlas por categorias a traves de la etiqueta "optgroup" con el atributo
+        label para nombrar la categoria
+        <br><br>
+        En caso de que tengamos muchos radio y solo queremos seleccionar uno, agregar un el atributo "name" en todos los
+        que sean opciones
+        <br><br>
+        Para mostrar una opcion seleccionada por defecto usar el atributo "checked"
+        <br><br>
+        Para ser completos agregar el atributo "value", que sera el contenido que el muestra
+        <br><br>
+        select -> combinacion de radio y checkbox
+        <br>
+
     </p>
     <form action="">
-        <h6>Genero</h6>
+        <h5>Elementos seleccionables</h5>
+        <h5>Genero</h5>
         <label for="">Masculino</label>
-        <input type="radio">
+        <input type="radio" name="genero" value="masculino" checked>
         <label for="">Femenino</label>
-        <input type="radio">
+        <input type="radio" name="genero" value="femenino">
         <label for="">Desconocido</label>
-        <input type="radio">
+        <input type="radio" name="genero" value="Desconocido">
+        <hr>
+
+        <label for="">HTML</label>
+        <input type="checkbox" name="lenguages" value="HTML">
+        <label for="">CSS</label>
+        <input type="checkbox" name="lenguages" value="CSS">
+        <label for="">JAVASCRIPT</label>
+        <input type="checkbox" name="lenguages" value="JAVASCRIPT">
+        <hr>
+        <!-- multiple para seleccionar mas de uno -->
+        <select name="lenguages" multiple>
+            <option value="HTML">HTML</option>
+            <option value="CSS">CSS</option>
+            <option value="JAVASCRIPT">JAVASCRIPT</option>
+        </select>
+        <hr>
+
+        <select name="mascotas">
+            <optgroup label="4 patas">
+                <option value="perro">Perro</option>
+                <option value="gato">Gato</option>
+                <option value="hasmter">Hamster</option>
+                <option value="conejo">Conejo</option>
+            </optgroup>
+            <optgroup label="aves">
+                <option value="loro">Loro</option>
+                <option value="canario">Canario</option>
+            </optgroup>
+            <optgroup label="otras">
+                <option value="serpiente">Serpiente</option>
+                <option value="tarantula">Tarantula</option>
+            </optgroup>
+        </select>
+        <hr>
+
+        <input type="list" list="pets">
+        <datalist id="pets">
+            <option value="perro">Perro</option>
+            <option value="gato">Gato</option>
+            <option value="hasmter">Hamster</option>
+            <option value="conejo">Conejo</option>
+            <option value="loro">Loro</option>
+            <option value="canario">Canario</option>
+            <option value="serpiente">Serpiente</option>
+            <option value="tarantula">Tarantula</option>
+        </datalist>
     </form>
+    <hr>
+
+    <h4>MAS ELEMENTOS</h4>
+    <p>
+        fildset ->  se utiliza para agrupar dentro de un formulario
+        <br><br>
+        legend -> representa una etiqueta para el contenido del fieldset
+        <br><br>
+        file -> este input se utiliza para carfar archivos y envisrlos desde un formulario
+        <br><br>
+        meter -> representa un valor dentro de un rango conocido
+        <br><br>
+        progress -> representa para el progeso de una tarea
+        <br><br>
+        textarea -> se utiliza para introducir texto en un formulario
+    </p>
 </body>
 
 </html>
