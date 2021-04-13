@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contenido EMBEBIDO</h1>
+    <h4>IMAGENES</h4>
+    <h4>DEVICE PIXEL RATIO</h4>
+    <p>
+        esla relacion que existe entre los pixeles reales que tiene el dispositivo y los pixeles que tenemos desponibles para pintar contenido
+        <br><br>
+        DPR = pixeles reales / pixeles disponibles
+    </p>
+    <hr>
+    <h4>ATRIBUTO SRCSET</h4>
+    <p>
+        Cargar imganes depende del DPR
+        <br><br>
+        Este atributo s¿nos ayudara a mostrar imagenes dependiendo la resolucion de pantalla
+        <br><br>
+        <pre>
+            <code>
+                img srcset="
+                /direccion_de_primera_imagen,
+                /direccion_de_segunda_imagen numero_mas_x
+                alt ="" 
+                "
+                <br>
+                <p>Esto semostrara la segunda imagen al hacer zoom de 200</p>
+                img srcset="
+                /direccion_de_primera_imagen,
+                /direccion_de_segunda_imagen 2x
+                alt ="" 
+                "
+            </code>
+        </pre>
+    </p>
+    <hr>
+    <h4>PICTURE</h4>
+    <p>
+        Tienes mas atributos, debe contener la etiqueta picture dentro un source y muy importante debe contener la etiqueta img, ya que si no esta, no se mostrara nada aunque tenga los das primeros etiquetas
+    </p>
+    <pre>
+        <code>
+            picture
+                source srcset="
+                /direccion_de_imagen,
+                "
+
+                source srcset="
+                /direccion_de_imagen,
+                media="(max-width:1200px)"
+                "
+
+
+                img srcset="
+                /direccion_de__imagen
+                "
+            /picture
+        </code>
+    </pre>
+    <hr>
+    <h4>AUDIO</h4>
+    <p>
+        autoplay -> se reproducira automaticamente cuando inicie la pagina web
+        <br><br>
+        controls -> mostrar los controles para hacer click para reproducir la musica 
+        <br><br>
+        muted -> siliencia la musica
+    </p>
+    <audio src="/assest/lluvia_al_corazon.mp3" controls></audio>
+    <hr>
+    <h4>VIDEO</h4>
+    <p>
+        controls -> mostrar los controles para hacer click para reproducir el video
+        <br><br>
+        loop -> cuando acabe el video vuelva a empezar desde el principio
+        <br><br>
+        poster -> seleccionar la miniatura, el pre antes de darle el play
+        <br><br>
+        Al tener poster es mejor no tener el atributo autoplay ya que no se mostrara la miniatura
+    </p>
+    <pre>
+        <code>
+            video src="
+            controls
+            autoplay
+            muted
+            loop
+            poster="/direccion_de_imagen"
+            "
+            /video
+        </code>
+    </pre>
+    <hr>
+    <h4>IFRAMES</h4>
+    <p>
+        Introducir una pagina externa e incluirla a la nuestra
+        <br><br>
+        No hay que abusar de los IFRAMES porque tendra mas carga de los mas normal, y va a hacerlo mas lento al cargar la pagina
+        <br><br>
+    </p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/bzQYtpjMjSo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <hr>
+    <h4>FIGURE</h4>
+    <p>
+        Sirve para meter contenido relacionado
+    </p>
+    <h5>Gatos</h5>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos voluptate repellendus commodi, minus id aperiam sed eius maxime repellat perspiciatis officiis nobis? Dolorum qui consectetur atque, nihil dignissimos sed dicta!</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis praesentium, minus quia voluptatum repellat ex cum eveniet tempore, labore asperiores tenetur, numquam eligendi? Voluptate voluptatibus incidunt vero eligendi obcaecati laudantium.
+    </p>
+    <figure>
+        <img src="/assest/gato.jpg" alt="gato asombrado">
+        <figcaption>Gato</figcaption>
+    </figure>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos voluptate repellendus commodi, minus id aperiam sed eius maxime repellat perspiciatis officiis nobis? Dolorum qui consectetur atque, nihil dignissimos sed dicta!</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis praesentium, minus quia voluptatum repellat ex cum eveniet tempore, labore asperiores tenetur, numquam eligendi? Voluptate voluptatibus incidunt vero eligendi obcaecati laudantium.
+    </p>
+</body>
+</html>
